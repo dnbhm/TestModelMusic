@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Рекомендованный класс
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Результаты</h1>
+    <h2>{{context}}</h2>
+      <table>
+      <tbody>
+        {% for row in data %}
+        <tr>
+           <th>Популярность</th>
+          <td>{{ row[1] }}</td>
+          <th>танцевальность</th>
+          <td>{{ row[2] }}</td>
+          </tr>
+        <tr>
+          <th>энергетика</th>
+          <td>{{ row[3] }}</td>
+          <th>тональность</th>
+          <td>{{ row[4] }}</td>
+          </tr>
+        <tr>
+          <th>громкость</th>
+          <td>{{ row[5] }}</td>
+          <th>режим</th>
+          <td>{{ row[6] }}</td>
+          </tr>
+        <tr>
+          <th>выразительность</th>
+          <td>{{ row[7] }}</td>
+          <th>акустичность</th>
+          <td>{{ row[8] }}</td>
+          </tr>
+        <tr>
+          <th>инструментальность</th>
+          <td>{{ row[9] }}</td>
+          <th>живость</th>
+          <td>{{ row[10] }}</td>
+          </tr>
+        <tr>
+          <th>валентность</th>
+          <td>{{ row[11] }}</td>
+          <th>темп</th>
+          <td>{{ row[12] }}</td>
+          </tr>
+        <tr>
+          <th>длительность</th>
+          <td>{{ row[13] }}</td>
+          <th>тактовый размер</th>
+          <td>{{ row[14] }}</td>
+
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+{% endblock %}

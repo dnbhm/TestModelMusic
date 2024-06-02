@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Создание Запроса
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h2>Введите параметры музыкального произведения</h2>
+    <form action="/create" method="post">
+      <table>
+      <tr>
+      <input type="text" name="Popularity" placeholder="Популярность">
+        </tr>
+        <tr>
+      <input type="text" name="danceability" placeholder="танцевальность">
+          </tr>
+        <tr>
+      <input type="text" name="energy" placeholder="энергетика">
+          </tr>
+      <input type="text" name="key" placeholder="тональность">
+      <input type="text" name="loudness" placeholder="громкость">
+      <input type="text" name="mode" placeholder="режим">
+      <input type="text" name="speechiness" placeholder="выразительность">
+      <input type="text" name="acousticness" placeholder="акустичность">
+      <input type="text" name="instrumentalness" placeholder="инструментальность">
+      <input type="text" name="liveness" placeholder="живость">
+      <input type="text" name="valence" placeholder="валентность">
+      <input type="text" name="tempo" placeholder="темп">
+      <input type="text" name="duration_in" placeholder="длительность">
+      <input type="text" name="time_signature" placeholder="тактовый размер">
+      <input type="submit" value="Create">
+        </table>
+    </form>
+</div>
+{% endblock %}
